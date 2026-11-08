@@ -32,7 +32,7 @@ unzip -q /tmp/awscliv2.zip -d /tmp
 # --- Pull our repo (reskin config, branding, KB content) + LibreChat ----------
 mkdir -p "$APP_DIR"
 cd "$APP_DIR"
-git clone --depth 1 https://github.com/REPLACE_WITH_YOUR_GITHUB_USER/sam10-helpwise.git repo
+git clone --depth 1 https://github.com/Kishhh19/sam10-helpwise.git repo
 git clone --depth 1 --branch "$LIBRECHAT_TAG" https://github.com/LibreChat-AI/LibreChat.git librechat
 
 cp repo/config/librechat.yaml librechat/librechat.yaml
