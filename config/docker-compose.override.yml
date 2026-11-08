@@ -1,0 +1,20 @@
+# HelpWise (Cobalt Dynamics) — overrides on top of LibreChat's own docker-compose.yml
+# Copy this file to the root of your LibreChat checkout (next to its docker-compose.yml)
+# before running `docker compose up -d`. Docker Compose merges it automatically.
+services:
+  api:
+    volumes:
+      # Our librechat.yaml config (customWelcome, Google endpoint settings, etc.)
+      - type: bind
+        source: ./librechat.yaml
+        target: /app/librechat.yaml
+      # Branding assets swapped over LibreChat's defaults (reskin requirement #1 — Identity)
+      - type: bind
+        source: ./branding/assets/logo.svg
+        target: /app/client/public/assets/logo.svg
+      - type: bind
+        source: ./branding/assets/favicon-32x32.png
+        target: /app/client/public/assets/favicon-32x32.png
+      - type: bind
+        source: ./branding/assets/favicon-16x16.png
+        target: /app/client/public/assets/favicon-16x16.png

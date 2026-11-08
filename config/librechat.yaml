@@ -1,0 +1,22 @@
+# HelpWise (Cobalt Dynamics) — LibreChat configuration
+version: 1.2.9
+
+cache: true
+
+interface:
+  customWelcome: 'Welcome to HelpWise — Cobalt Dynamics IT Helpdesk. Ask about password resets, VPN access, hardware requests, or onboarding steps.'
+  landingFooter: true
+
+endpoints:
+  google:
+    # Free-tier Gemini models only — keep usage inside the free quota.
+    titleModel: "gemini-2.0-flash-lite-001"
+
+# ---------------------------------------------------------------------------
+# Domain language / data: Cobalt Dynamics' own IT-helpdesk knowledge categories.
+# These map onto the invented documents in content/it-helpdesk-kb/, which are
+# uploaded to S3 and read by the assistant at startup (the "at least one AWS
+# integration that is more than static hosting" requirement — WS-A #2).
+# ---------------------------------------------------------------------------
+# Categories: Account & Access, Hardware & Equipment, Network & VPN,
+#             Onboarding & Offboarding, Software & Licensing, Security Incidents

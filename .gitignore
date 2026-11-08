@@ -1,0 +1,16 @@
+# Secrets — never commit real credentials
+.env
+*.env.local
+**/librechat/.env
+aws-credentials*
+*.pem
+*.key
+
+# Local LibreChat checkout (cloned separately per README, not vendored here)
+librechat/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
