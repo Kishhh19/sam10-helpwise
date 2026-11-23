@@ -10,7 +10,7 @@ interface:
 endpoints:
   google:
     # Free-tier Gemini models only — keep usage inside the free quota.
-    titleModel: "gemini-2.0-flash-lite-001"
+    titleModel: "gemini-flash-lite-latest"
 
 # ---------------------------------------------------------------------------
 # Domain language / data: Cobalt Dynamics' own IT-helpdesk knowledge categories.

@@ -56,7 +56,7 @@ ENV_FILE="$APP_DIR/librechat/.env"
 sed -i \
   -e "s|^APP_TITLE=.*|APP_TITLE=HelpWise|" \
   -e "s|^GOOGLE_KEY=.*|GOOGLE_KEY=${GOOGLE_KEY}|" \
-  -e "s|^# GOOGLE_MODELS=.*|GOOGLE_MODELS=gemini-2.0-flash-001,gemini-2.0-flash-lite-001|" \
+  -e "s|^# GOOGLE_MODELS=.*|GOOGLE_MODELS=gemini-3.8-flash,gemini-flash-lite-latest|" \
   -e "s|^CREDS_KEY=.*|CREDS_KEY=${CREDS_KEY}|" \
   -e "s|^CREDS_IV=.*|CREDS_IV=${CREDS_IV}|" \
   -e "s|^JWT_SECRET=.*|JWT_SECRET=${JWT_SECRET}|" \

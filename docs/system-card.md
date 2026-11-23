@@ -46,8 +46,10 @@ honest accuracy number from a real evaluation, e.g. "correct on N of 10 test que
 
 ## 7. How it is served
 - **Where it runs:** AWS EC2 (single instance, one region), served over HTTPS.
-- **The model behind it:** Google Gemini, free tier (`gemini-2.0-flash-001` / `-lite-001`), via a
-  student-held free API key — not hosted on AWS, no AWS AI service used.
+- **The model behind it:** Google Gemini, free tier (`gemini-3.8-flash` for chat,
+  `gemini-flash-lite-latest` for titles), via a student-held free API key — not hosted on AWS, no
+  AWS AI service used. The original `gemini-2.0-flash-001` model was retired by Google in November
+  2026 and replaced on 2026-11-23 (see `automation/fix-gemini-model.sh`).
 - **What happens if the model or service is unavailable:** The chat UI itself stays reachable;
   a new message will show a visible error if Gemini's API is unreachable or the free-tier quota is
   exhausted. There is no automatic fallback model configured.
